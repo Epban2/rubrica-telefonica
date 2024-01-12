@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubrica La Rocca</title>
+</head>
+
+<body>
+    <div style="padding-left: 30px;">
+        <h1>Rubrica telefonica</h1>
+        <input type="text" name="nome" id="nome" placeholder="Inserire nome">
+        <input type="text" name="cognome" id="cognome" placeholder="Inserire cognome">
+        <input type="number" name="numero" id="numero" min="0" placeholder="Inserire numero">
+        <br>
+        <div id="mostraInput" style="display: none;"> <!--sono nascosi, la funzione li rende visibili-->
+            <input type="text" name="nuovoNome" id="nuovoNome" placeholder="Inserire nuovo nome">
+            <input type="text" name="nuovoCognome" id="nuovoCognome" placeholder="Inserire nuovo cognome">
+            <input type="number" name="nuovoNumero" id="nuovoNumero" min="0" placeholder="Inserire nuovo numero">   
+            <button onclick="modifica()">Conferma</button><!--bottone di conferma che richiama la funzione modifica-->
+        </div>
+        <br><br>
+        <button onclick="aggiungiPersona()">Aggiungi in rubrica</button>
+        <button onclick="printRubrica()">Stampa rubrica</button>
+        <button onclick="elimina()">Elimina contatto</button>
+        <button onclick="mostraInput()">Modifica contatto</button> <!--fa comparire il div con i tre input e il bottone conferma-->
+        
+        <p id="stampa"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
